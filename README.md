@@ -1,7 +1,7 @@
 ## 説明
 
 AWS lambda で実行するpythonコードのdeployment packageを作成するLinux 環境を作成します。
-AWS lambdaでは、pythonで作成された関数を実行できますが、pip installが使用できないため、モジュールを利用するためには、あらかじめ実行ファイルをzipへ圧縮し、マネジメントコンソールからアップロードする必要があります。
+AWS lambdaでは、pythonで作成された関数を実行できますが、pip installが使用できないため、モジュールを利用するためには、あらかじめ実行ファイルとモジュール群をdeployment packageとしてzipへ圧縮し、マネジメントコンソールからアップロードする必要があります。
 
 このリポジトリでは、amazon linux 2 上でpythonのdeployment package を作成する仮想環境を提供します。
 
@@ -78,7 +78,7 @@ source venv/bin/activate
 python -m pip install --upgrade pip
 ```
 
-・必要なモジュールをインストール
+・必要なモジュールをインストール (必要なものをインストールする)
 ```
 # paramiko
 
@@ -124,8 +124,8 @@ zip -r test_function ./site-packages
 
 ・マネジメントコンソール > lambda <br/>
 ・対象の関数を選択 <br/>
-・コンソールからzipのアップロード
-・関数の実行は、ハンドラの設定を変更する <br/>
+・コンソールからzipのアップロード<br/>
+・ハンドラの設定を変更する <br/>
 　-> site-packages/test.lambda_handler
 
 ```
