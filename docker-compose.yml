@@ -7,5 +7,5 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./src:/home/src
+      - ./src:/home/
     tty: true

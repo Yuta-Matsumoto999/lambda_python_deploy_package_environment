@@ -8,6 +8,3 @@ RUN yum install -y gcc openssl-devel bzip2-devel libffi-devel wget zip tar gzip 
     make altinstall && \
     rm -f /opt/Python-3.9.6.tgz && \
     python3.9 -m pip install --upgrade pip
-
-RUN pip install paramiko && \
-    pip install --no-binary dulwich dulwich --config-settings "--build-option=--pure"
