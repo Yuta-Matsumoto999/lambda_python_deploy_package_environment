@@ -57,7 +57,7 @@ make app
 cd home
 ```
 
-・venvで仮想環境構築
+・venvで仮想環境構築(初回のみ)
 ```
 python3.9 -m venv venv
 
@@ -73,7 +73,7 @@ source venv/bin/activate
 (venv) bash-4.2#
 ```
 
-・pipを更新
+・pipを更新(初回のみ)
 ```
 python -m pip install --upgrade pip
 ```
